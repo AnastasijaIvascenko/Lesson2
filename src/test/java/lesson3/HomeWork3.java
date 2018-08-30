@@ -7,9 +7,6 @@ public class HomeWork3 {
     private float credit = 100000;
     private float creditTerm = 360;
     private float first120Months = 5;
-    private float daysInAMonth = 30;
-    private float daysInAYear = 365;
-    private float percentage = 100;
     private float second120Months = 3;
     private float last120Months = 2;
     private float finalResult = 200000;
@@ -22,7 +19,7 @@ public class HomeWork3 {
         System.out.println("The payment per month is:" + paymentPerMonth);
 
         //Percentage payments
-        float resultFirstRate = (credit * first120Months * daysInAMonth) / (percentage * daysInAYear);
+        float resultFirstRate = (credit * first120Months * 30) / (100 * 365);
         System.out.println("Percentage payments per month for first 10 years is::" + resultFirstRate);
 
         //Percentage payments for first 10 years
@@ -46,7 +43,7 @@ public class HomeWork3 {
         System.out.println("Loan Balance for next 20 years is:" + loanBalance);
 
         //Percentage payments for second 10 years
-        float resultSecondRate = (loanBalance * second120Months * daysInAMonth) / (percentage * daysInAYear);
+        float resultSecondRate = (loanBalance * second120Months * 30) / (100 * 365);
         System.out.println("Percentage payment per month for second 10 years is:" + resultSecondRate);
 
         //Percentage payments for second 10 years
@@ -62,7 +59,7 @@ public class HomeWork3 {
         System.out.println("Loan balance for last 10 years is:" + lastLoanBalance);
 
         //Percentage payments for last 10 years
-        float resultLastRate = (lastLoanBalance * last120Months * daysInAMonth) / (percentage * daysInAYear);
+        float resultLastRate = (lastLoanBalance * last120Months * 30) / (100 * 365);
         System.out.println("Percentage payment per month for last 1o years is:" + resultLastRate);
 
         //Percentage payment for last 10 years
