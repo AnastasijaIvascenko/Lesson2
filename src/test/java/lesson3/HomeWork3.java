@@ -23,11 +23,11 @@ public class HomeWork3 {
         System.out.println("Percentage payments per month for first 10 years is::" + resultFirstRate);
 
         //Percentage payments for first 10 years
-        float resultFirsRateForFirst10Years = resultFirstRate * 120;
-        System.out.println("Percentage payments for first 10 years is:" + resultFirsRateForFirst10Years);
+        float percentageForFirst10Years = percentageFor10Years(resultFirstRate);
+        System.out.println("Percentage payments for first 10 years is:" + percentageForFirst10Years);
 
         //Payment for first 10 years without percentage
-        float paymentForFirst10YearsWithoutPercentage = paymentPerMonth * 120;
+        float paymentForFirst10YearsWithoutPercentage = paymentFor10Years(paymentPerMonth);
         System.out.println("The payment for first 10 years without percentage is:" + paymentForFirst10YearsWithoutPercentage);
 
         //Payment for month with percentage
@@ -47,11 +47,11 @@ public class HomeWork3 {
         System.out.println("Percentage payment per month for second 10 years is:" + resultSecondRate);
 
         //Percentage payments for second 10 years
-        float resultSecondRateForSecond10Years = resultSecondRate * 120;
-        System.out.println("Percentage payments for second 10 years is:" + resultSecondRateForSecond10Years);
+        float percentageForSecond10Years = percentageFor10Years(resultSecondRate);
+        System.out.println("Percentage payments for second 10 years is:" + percentageForSecond10Years);
 
         //Payment for second 10 years without percentage
-        float paymentForSecond10YearsWithoutPercentage = paymentPerMonth * 120;
+        float paymentForSecond10YearsWithoutPercentage = paymentFor10Years(paymentPerMonth);
         System.out.println("The payment for second 10 years without percentage is:" + paymentForSecond10YearsWithoutPercentage);
 
         //Loan balance for last 10 years
@@ -63,11 +63,11 @@ public class HomeWork3 {
         System.out.println("Percentage payment per month for last 1o years is:" + resultLastRate);
 
         //Percentage payment for last 10 years
-        float resultLastRateForLast10Years = resultLastRate * 120;
-        System.out.println("Percentage payments for last 10 years is:" + resultLastRateForLast10Years);
+        float percentageForLast10Years = percentageFor10Years(resultLastRate);
+        System.out.println("Percentage payments for last 10 years is:" + percentageForLast10Years);
 
         //General overpayment
-        float overpayment = resultFirsRateForFirst10Years + resultSecondRateForSecond10Years + resultLastRateForLast10Years;
+        float overpayment = percentageForFirst10Years + percentageForSecond10Years + percentageForLast10Years;
         System.out.println("General overpayment is:" + overpayment);
 
         //Total payment for 30 years
@@ -77,6 +77,15 @@ public class HomeWork3 {
         Assert.assertEquals("The total payment is wrong", finalResult, totalPayment, 0);
 
     }
+
+    private float percentageFor10Years (float percentage) {
+        return percentage * 120;
+    }
+
+    private float paymentFor10Years (float payment) {
+        return payment * 120;
+    }
+
 
 }
 
